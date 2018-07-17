@@ -5,7 +5,7 @@
 </head>
 <body>
  
-	<h2>CRUD DATA MAHASISWA</h2>
+	<h2>Edit Kategori</h2>
 	<br/>
 	<a href="kategori.php">KEMBALI</a>
 	<br/>
