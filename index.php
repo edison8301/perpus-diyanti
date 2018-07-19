@@ -13,6 +13,13 @@
   
 </head>
 <body>
+
+  <?php 
+  session_start();
+  if($_SESSION['status']!="login"){
+    header("location:login.php?pesan=belum_login");
+  }
+  ?>
   <!-- Header -->
 
   <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -25,19 +32,22 @@
   
   <div class="container-fluid">
     <div class="row content">
-      <div class="col-sm-3 sidenav">
+      <div class="col-sm-2 sidenav">
         <ul class="nav nav-pills nav-stacked">
+          <br>
+          <br>
+          <br>
 
-          <li><a href="index.php?page=index">Dashboard</a></li>
-          <li><a href="index.php?page=anggota">Anggota</a></li>
+          <li><a href="index.php">Dashboard</a></li>
+          <li><a href="anggota.php">Anggota</a></li>
           <li><a href="buku.php">Buku</a></li>
           <li><a href="kategori.php">Kategori</a></li>
           <li><a href="peminjaman.php">Peminjaman</a></li>
           <li><a href="penerbit.php">Penerbit</a></li>
           <li><a href="penulis.php">Penulis</a></li>
           <li><a href="petugas.php">Petugas</a></li>
-          <li><a href="user_role.php">User_role</a></li>
           <li><a href="logout.php">Logout</a></li>
+          
 
         </ul>
       </div>
@@ -51,9 +61,7 @@
 
         <div class="col-sm-9">
 
-          <?php
-          include 'konten.php';
-          ?>
+         
 
  <!-- <table class="table table-hover">
   <?php

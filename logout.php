@@ -1,4 +1,10 @@
-<?php
+<?php 
+// mengaktifkan session
 session_start();
+ 
+// menghapus semua session
 session_destroy();
-header('location:login.php');
+ 
+// mengalihkan halaman sambil mengirim pesan logout
+header("location:login.php?pesan=logout");
+?>

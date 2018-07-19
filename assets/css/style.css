@@ -25,21 +25,23 @@ body{
  background-color: red;
 }
 
-.btn-info{
-	width: 100px;
+/*.btn-info{
+	width: 120px;
 	height:40px;
 	border: 2px;
-}
+}*/
 
 .navbar-static-top{
 	background: #dcdde1;
+  /*position: relative;
+  color: white;*/
 }
 
-.btn-success{
-	width: 100px;
+/*.btn-success{
+	width: 120px;
 	height:40px;
 	border: 2px;
-}
+}*/
 
 .row.content {height: 1500px}
     
@@ -64,3 +66,8 @@ body{
         padding: 15px;
       }
       .row.content {height: auto;} 
+
+      .table-bordered{
+        width: 10px;
+      }
+

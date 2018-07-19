@@ -1,3 +1,7 @@
+<?php
+include 'koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,10 +31,10 @@
 			<td>Penulis </td>
 			<td>
 			<?php
-			include 'koneksi.php';
+			
 			$read_penulis = mysqli_query($koneksi, "SELECT * FROM penulis"); 
 			?>
-			<select name="penulis">
+			<select name="id_penulis">
 				<option>Pilih penulis</option>
 				<?php
 				if ($read_penulis->num_rows> 0 ) {
@@ -50,10 +54,10 @@
 			<td>Penerbit </td>
 			<td>
 			<?php
-			include 'koneksi.php';
+			
 			$read_penerbit = mysqli_query($koneksi, "SELECT * FROM penerbit"); 
 			?>
-			<select name="penerbit">
+			<select name="id_penerbit">
 				<option>Pilih penerbit</option>
 				<?php
 				if ($read_penerbit->num_rows> 0 ) {
@@ -72,10 +76,10 @@
 			<td>Kategori </td>
 			<td>
 			<?php
-			include 'koneksi.php';
+			
 			$read_kategori = mysqli_query($koneksi, "SELECT * FROM kategori"); 
 			?>
-			<select name="kategori">
+			<select name="id_kategori">
 				<option>Pilih kategori</option>
 				<?php
 				if ($read_kategori->num_rows> 0 ) {
