@@ -5,25 +5,63 @@ include 'koneksi.php'
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tambah Peminjaman</title>
+	<title>Perpustakaan</title>
 </head>
 <body>
-<h3>Tambah Data Peminjaman</h3>
-<br>
-<a href="peminjaman.php">Kembali</a>
-<br>
-<br>
-<form method="post" action="aksi_tambah_peminjaman.php">
-		<table>
 
-			<tr>	
-			<td>Buku </td>
-			<td>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="../assets/css/style_admin.css" rel="stylesheet">
+
+	</head>
+<body>
+	<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <a href="index.php" class="navbar-brand"> Website Perpustakaan</a>
+    <div class="navbar-header">
+    </div>
+  </nav>
+
+   <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <ul class="nav nav-pills nav-stacked">
+          <br>
+
+          <li><a href="index.php">Dashboard</a></li>
+          <li><a href="anggota.php">Anggota</a></li>
+          <li><a href="buku.php">Buku</a></li>
+          <li><a href="kategori.php">Kategori</a></li>
+          <li><a href="peminjaman.php">Peminjaman</a></li>
+          <li><a href="penerbit.php">Penerbit</a></li>
+          <li><a href="penulis.php">Penulis</a></li>
+          <li><a href="petugas.php">Petugas</a></li>
+          <li><a href="logout.php">Logout</a></li>
+          
+       </ul>
+      </div>
+
+       <div class="col-sm-9">
+
+<h3>Tambah Data Peminjaman</h3>
+
+<form method="post" action="aksi_tambah_peminjaman.php">
+	<br>
+		
+				<div class="form-group row">
+      			<div class="col-xs-4">
+
+			<label for="sel1">Kategori</label>
+
 			<?php
 			
 			$read_buku = mysqli_query($koneksi, "SELECT * FROM buku"); 
 			?>
-			<select name="id_buku">
+			<select name="id_buku" class="form-control">
 				<option>Pilih buku</option>
 				<?php
 				if ($read_buku->num_rows> 0 ) {
@@ -34,19 +72,16 @@ include 'koneksi.php'
 					}
 				}
 				  ?>
-				  </td>
+				  
 			</select>
-			</tr>
-
-
-			<tr>	
-			<td>Anggota</td>
-			<td>
+			<br>
+			
+			<label for="sel1">Anggota</label>			
 			<?php
 			
 			$read_anggota = mysqli_query($koneksi, "SELECT * FROM anggota"); 
 			?>
-			<select name="id_anggota">
+			<select name="id_anggota" class="form-control">
 				<option>Pilih Anggota</option>
 				<?php
 				if ($read_buku->num_rows> 0 ) {
@@ -57,24 +92,23 @@ include 'koneksi.php'
 					}
 				}
 				  ?>
-				  </td>
+				  
 			</select>
-			</tr>
+			<br>
 
-			<tr>
-				<td>Tanggal Pinjam</td>
-				<td><input type="date" name="tanggal_pinjam"></td>
-			</tr>
-			<tr>
-				<td>Tanggal Kembali</td>
-				<td><input type="date" name="tanggal_kembali"></td>
-			</tr>
+			<label for="sel1">Tanggal Pinjam</label>
+			<input type="date" name="tanggal_pinjam" class="form-control">
+			<br>
 
-			<tr>
-				<td></td>
-				<td><input type="submit" value="SIMPAN"></td>
-			</tr>		
+			<label for="sel1">Tanggal Kembali</label>
+			 <input type="date" name="tanggal_kembali" class="form-control">
+			 <br>
+
+				<input type="submit" value="Simpan" class="btn btn-info">		
 		</table>
 	</form>
+	</div>
+</div>
+</div>
 </body>
 </html>

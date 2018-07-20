@@ -21,9 +21,7 @@
       <div class="col-sm-2 sidenav">
         <ul class="nav nav-pills nav-stacked">
           <br>
-          <br>
-          <br>
-
+          
           <li><a href="index.php">Dashboard</a></li>
           <li><a href="anggota.php">Anggota</a></li>
           <li><a href="buku.php">Buku</a></li>
@@ -42,7 +40,7 @@
 
 <h3>Data Penulis</h3>
 <br>
-<a href="tambah_anggota.php" class="btn btn-info" role="button">Tambah Penulis</a>
+<a href="tambah_penulis.php" class="btn btn-info" role="button">Tambah Penulis</a>
 <br>
 <br>
 <div class="table-responsive">         

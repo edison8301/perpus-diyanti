@@ -35,8 +35,7 @@
       <div class="col-sm-2 sidenav">
         <ul class="nav nav-pills nav-stacked">
           <br>
-          <br>
-          <br>
+
 
           <li><a href="index.php">Dashboard</a></li>
           <li><a href="anggota.php">Anggota</a></li>
@@ -47,23 +46,13 @@
           <li><a href="penulis.php">Penulis</a></li>
           <li><a href="petugas.php">Petugas</a></li>
           <li><a href="logout.php">Logout</a></li>
-          
-
+        
         </ul>
       </div>
-      <!-- <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span> -->
-
+     
         <div class="col-sm-9">
 
-         
-
- <!-- <table class="table table-hover">
+         <!-- <table class="table table-hover">
   <?php
 //include 'index.php'
   ?> -->

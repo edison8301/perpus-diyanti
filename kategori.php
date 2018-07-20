@@ -24,9 +24,7 @@
       <div class="col-sm-2 sidenav">
         <ul class="nav nav-pills nav-stacked">
           <br>
-          <br>
-          <br>
-
+         
           <li><a href="index.php">Dashboard</a></li>
           <li><a href="anggota.php">Anggota</a></li>
           <li><a href="buku.php">Buku</a></li>
