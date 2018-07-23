@@ -68,8 +68,20 @@
 			?>
 			<tr>
 				<td><?php echo $no++; ?></td>
-				<td><?php echo $d['id_buku']; ?></td>
-				<td><?php echo $d['id_anggota']; ?></td>
+        <?php
+        $buku = mysqli_query($koneksi, "SELECT * FROM buku where id='$d[id_buku]'");
+        $id = mysqli_fetch_array($buku);
+        $namabuku = $id['nama'];
+        ?>
+				<td><?php echo $namabuku; ?></td>
+
+        <?php
+        $anggota = mysqli_query($koneksi, "SELECT * FROM anggota where id='$d[id_anggota]'");
+        $id = mysqli_fetch_array($anggota);
+        $namaanggota = $id['nama'];
+        ?>
+				<td><?php echo $namaanggota; ?></td>
+
 				<td><?php echo $d['tanggal_pinjam']; ?></td>
 				<td><?php echo $d['tanggal_kembali']; ?></td>
 				<td>

@@ -55,14 +55,14 @@ include 'koneksi.php'
 				<div class="form-group row">
       			<div class="col-xs-4">
 
-			<label for="sel1">Kategori</label>
+			<label for="sel1">Buku</label>
 
 			<?php
 			
 			$read_buku = mysqli_query($koneksi, "SELECT * FROM buku"); 
 			?>
 			<select name="id_buku" class="form-control">
-				<option>Pilih buku</option>
+				<option>Pilih Buku</option>
 				<?php
 				if ($read_buku->num_rows> 0 ) {
 					while ($data = $read_buku->fetch_assoc()) {
